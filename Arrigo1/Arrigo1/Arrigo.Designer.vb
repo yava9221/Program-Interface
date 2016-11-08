@@ -25,11 +25,13 @@ Partial Class Arrigo
         Me.components = New System.ComponentModel.Container()
         Me.StyleManager1 = New DevComponents.DotNetBar.StyleManager(Me.components)
         Me.SideNav1 = New DevComponents.DotNetBar.Controls.SideNav()
+        Me.SideNavPanel1 = New DevComponents.DotNetBar.Controls.SideNavPanel()
         Me.SideNavItem1 = New DevComponents.DotNetBar.Controls.SideNavItem()
         Me.Separator1 = New DevComponents.DotNetBar.Separator()
         Me.SideNavItem2 = New DevComponents.DotNetBar.Controls.SideNavItem()
-        Me.SideNavPanel1 = New DevComponents.DotNetBar.Controls.SideNavPanel()
+        Me.Button1 = New System.Windows.Forms.Button()
         Me.SideNav1.SuspendLayout()
+        Me.SideNavPanel1.SuspendLayout()
         Me.SuspendLayout()
         '
         'StyleManager1
@@ -48,6 +50,15 @@ Partial Class Arrigo
         Me.SideNav1.Size = New System.Drawing.Size(1457, 764)
         Me.SideNav1.TabIndex = 0
         Me.SideNav1.Text = "SideNav1"
+        '
+        'SideNavPanel1
+        '
+        Me.SideNavPanel1.Controls.Add(Me.Button1)
+        Me.SideNavPanel1.Dock = System.Windows.Forms.DockStyle.Fill
+        Me.SideNavPanel1.Location = New System.Drawing.Point(78, 36)
+        Me.SideNavPanel1.Name = "SideNavPanel1"
+        Me.SideNavPanel1.Size = New System.Drawing.Size(1374, 727)
+        Me.SideNavPanel1.TabIndex = 2
         '
         'SideNavItem1
         '
@@ -74,13 +85,14 @@ Partial Class Arrigo
         Me.SideNavItem2.Symbol = ""
         Me.SideNavItem2.Text = "Home"
         '
-        'SideNavPanel1
+        'Button1
         '
-        Me.SideNavPanel1.Dock = System.Windows.Forms.DockStyle.Fill
-        Me.SideNavPanel1.Location = New System.Drawing.Point(78, 36)
-        Me.SideNavPanel1.Name = "SideNavPanel1"
-        Me.SideNavPanel1.Size = New System.Drawing.Size(1374, 727)
-        Me.SideNavPanel1.TabIndex = 2
+        Me.Button1.Location = New System.Drawing.Point(47, 51)
+        Me.Button1.Name = "Button1"
+        Me.Button1.Size = New System.Drawing.Size(58, 23)
+        Me.Button1.TabIndex = 0
+        Me.Button1.Text = "Button1"
+        Me.Button1.UseVisualStyleBackColor = True
         '
         'Arrigo
         '
@@ -90,10 +102,12 @@ Partial Class Arrigo
         Me.Controls.Add(Me.SideNav1)
         Me.DoubleBuffered = True
         Me.Font = New System.Drawing.Font("Segoe UI", 8.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.ForeColor = System.Drawing.Color.Black
         Me.Name = "Arrigo"
         Me.Text = "Arrigo"
         Me.SideNav1.ResumeLayout(False)
         Me.SideNav1.PerformLayout()
+        Me.SideNavPanel1.ResumeLayout(False)
         Me.ResumeLayout(False)
 
     End Sub
@@ -104,4 +118,5 @@ Partial Class Arrigo
     Friend WithEvents SideNavItem1 As DevComponents.DotNetBar.Controls.SideNavItem
     Friend WithEvents Separator1 As DevComponents.DotNetBar.Separator
     Friend WithEvents SideNavItem2 As DevComponents.DotNetBar.Controls.SideNavItem
+    Friend WithEvents Button1 As Button
 End Class
